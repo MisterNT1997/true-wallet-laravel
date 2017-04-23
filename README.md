@@ -8,7 +8,7 @@ Browse your [True Wallet](https://wallet.truemoney.com/) Transactions for Larave
 
 Install with composer
 ```
-composer require thatphon05/true-wallet v1.0.x-dev
+composer require thatphon05/true-wallet dev-master
 ```
 Add ServiceProvider to the providers in `app/config.php`
 ```php
