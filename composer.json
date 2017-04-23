@@ -1,0 +1,22 @@
+{
+    "name": "thatphon05/true-wallet",
+    "description": "Browse your True Wallet Transactions for Laravel Framework",
+    "keywords": ["laravel", "true-wallet", "true", "wallet", "True Wallet", "TrueMoney"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": ">=5.1.*",
+        "ext-curl": "*"
+    },
+    "authors": [
+        {
+            "name": "thatphon05",
+            "email": "thatphon05@gmail.com"
+        }
+    ],
+    "autoload": {
+		"psr-4": {
+          "Thatphon05\\TrueWallet\\": "src/"
+		}
+	}
+}
