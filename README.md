@@ -23,7 +23,7 @@ Publish configuration file.
 ```
 php artisan vendor:publish --tag=truewallet
 ```
-If you want to use SSL, set true in a config/truewallet.php
+If you want to use SSL, set true in a `config/truewallet.php`
 ```php
 return [
 
