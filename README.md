@@ -2,19 +2,19 @@
 
 [![StyleCI](https://styleci.io/repos/89118109/shield?branch=master)](https://styleci.io/repos/89118109)
 
-Browse your True Wallet Transactions for Laravel Framework.
+Browse your [True Wallet](https://wallet.truemoney.com/) Transactions for Laravel Framework.
 
 ## Install
 
 Install with composer
 ```
-composer require thatphon05/true-wallet dev-master
+composer require thatphon05/true-wallet v1.0.x-dev
 ```
-add ServiceProvider
+Add ServiceProvider to the providers in `app/config.php`
 ```php
 Thatphon05\TrueWallet\TrueWalletServiceProvider::class,
 ```
-add Facade
+if you want to use the facade, Add this code to aliases
 ```php
 'Wallet' => Thatphon05\TrueWallet\Facades\TrueWallet::class,
 ```
@@ -36,28 +36,28 @@ return [
 ```
 ## Usage
 
-Add True Wallet account.
+Add credentials.
 ```php
 Wallet::setAccount($email, $password);
 ```
-Get Transaction maximum 50 items.
+This method get Transaction maximum 50 items :
 ```php
 $trans = Wallet::getTransaction();
-foreach($wallets as $key => $value) {
+foreach ($trans as $key => $value) {
     echo 'reportID='.$value->reportID.' text1='.$value->text1En;
 }
 ```
-Get Deep Transaction from reportID.
+This method get Transaction from reportID :
 ```php
-$wallet = Wallet::getDeepTransaction($reportID);
-$decode = json_decode($wallet);
+$trans = Wallet::getDeepTransaction($reportID);
+$trans = json_decode($trans);
 ```
 Get TransactionID from reportID.
 ```php
 Wallet::getTransactionID($reportID);
 //eg. 2158596589
 ```
-cookie.txt is available at /storage/app if you want reset your cookie.txt, please use
+`cookie.txt` is in `storage/app` if you want reset your cookie, please use
 ```php
 Wallet:resetCookie();
 ```
