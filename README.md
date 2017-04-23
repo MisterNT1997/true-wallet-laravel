@@ -4,9 +4,6 @@
 
 Browse your True Wallet Transactions for Laravel Framework.
 
-## Requirement
-
-
 ## Install
 
 Install with composer
@@ -38,6 +35,7 @@ return [
 ];
 ```
 ## Usage
+
 Add True Wallet account.
 ```php
 Wallet::setAccount($email, $password);
