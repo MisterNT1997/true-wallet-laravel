@@ -34,7 +34,7 @@ class TrueWallet
     /**
      * Time for curl.
      *
-     * @var integer
+     * @var int
      */
     protected $timeout = 40;
 
@@ -76,8 +76,8 @@ class TrueWallet
 
     /**
      * Set account.
-     * @param $email
      *
+     * @param $email
      * @param $password
      */
     public function setAccount($email, $password)
@@ -108,7 +108,7 @@ class TrueWallet
         $tid = $this->getDeepTransaction($reportID);
         $check = $this->checkDeepData($tid);
         if ($check == false) {
-            return null;
+            return;
         }
 
         return $check->data->section4->column2->cell1->value;
@@ -126,7 +126,7 @@ class TrueWallet
         $deepTrans = $this->grab($this->deepTransUrl.$reportID);
         $check = $this->checkDeepData($deepTrans);
         if ($check == false) {
-            return null;
+            return;
         }
 
         return json_encode($check);
@@ -194,7 +194,6 @@ class TrueWallet
         curl_exec($ch);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, false);
-
 
         $curl = curl_exec($ch);
         if ($curl === false) {
