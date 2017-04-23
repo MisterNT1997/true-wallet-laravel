@@ -1,4 +1,6 @@
-# Laravel True Wallet
+# Laravel True Wallet 
+
+[![StyleCI](https://styleci.io/repos/89118109/shield?branch=master)](https://styleci.io/repos/89118109)
 
 Browse your True Wallet Transactions for Laravel Framework.
 
@@ -57,8 +59,8 @@ Get TransactionID from reportID.
 Wallet::getTransactionID($reportID);
 //eg. 2158596589
 ```
-if you want reset your cookie.txt, please use
+cookie.txt is available at /storage/app if you want reset your cookie.txt, please use
 ```php
 Wallet:resetCookie();
 ```
-cookie.txt is available at /storage/app
+
