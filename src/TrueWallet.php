@@ -135,11 +135,13 @@ class TrueWallet
     /**
      * Get transaction list maximum 50 items.
      *
-     * @return mixed
+     * @return string
      */
     public function getTransaction()
     {
-        return $this->grab($this->transUrl);
+        $trans = json_decode($this->grab($this->transUrl));
+
+        return $trans->data->activities;
     }
 
     /**
@@ -160,7 +162,7 @@ class TrueWallet
     }
 
     /**
-     *  remove cookie file.
+     *  Remove a cookie file.
      */
     public function resetCookie()
     {
