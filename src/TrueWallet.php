@@ -97,6 +97,16 @@ class TrueWallet
     }
 
     /**
+     * Set curl Timeout.
+     *
+     * @param $time
+     */
+    public function setTimeout($time)
+    {
+        $this->timeout = $time;
+    }
+
+    /**
      * Get TransactionID from reportID.
      *
      * @param $reportID
