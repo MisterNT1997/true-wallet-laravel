@@ -1,6 +1,6 @@
 # Laravel True Wallet 
 
-[![StyleCI](https://styleci.io/repos/89118109/shield?branch=master)](https://styleci.io/repos/89118109)
+[![StyleCI](https://styleci.io/repos/94993288/shield?branch=master)](https://styleci.io/repos/94993288)
 
 Browse your [True Wallet](https://wallet.truemoney.com/) Transactions for Laravel Framework.
 
